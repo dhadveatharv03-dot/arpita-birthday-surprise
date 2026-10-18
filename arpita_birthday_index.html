@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#21131d">
+<title>For Arpita ♡ | Birthday Surprise</title>
+<style>
+:root{--pink:#ff9eb5;--pale:#ffe8ee;--cream:#fff9f5;--wine:#5a2037;--dark:#17111d}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#fff5f7;color:#321b27;font-family:Georgia,'Trebuchet MS',serif;overflow-x:hidden}
+button{font:inherit;cursor:pointer}
+nav{position:sticky;top:0;z-index:20;background:#1b121eeF;color:#fff;padding:13px 9px;display:flex;justify-content:center;gap:17px;flex-wrap:wrap;backdrop-filter:blur(10px)}
+nav a{color:white;text-decoration:none;font-size:.88rem}
+nav a:hover{color:var(--pink)}
+section{padding:64px 18px;text-align:center;position:relative}
+.hero{min-height:92vh;display:grid;place-items:center;color:white;background:radial-gradient(ellipse at 50% 20%,#63354b 0,#2b1b2a 48%,#100d17 100%);overflow:hidden}
+.hero:before{content:"";position:absolute;inset:0;background-image:radial-gradient(#fff 1px,transparent 1.5px),radial-gradient(#ffc4d5 1px,transparent 1.5px);background-size:90px 90px,137px 137px;background-position:0 0,40px 35px;opacity:.23}
+.hero-inner{position:relative;max-width:760px;padding:18px}
+.eyebrow{text-transform:uppercase;letter-spacing:3px;color:#d87593;font-size:.78rem}
+.hero .eyebrow{color:#ffc5d4}
+h1{font-size:clamp(3.5rem,13vw,7rem);margin:12px 0;color:#ffc4d2;text-shadow:0 0 32px #ff779955}
+h2{font-size:clamp(2rem,6vw,3rem);margin:12px 0 20px}
+p{line-height:1.75}
+.btn{border:0;border-radius:999px;background:var(--pink);color:#391522;padding:14px 23px;margin:8px;box-shadow:0 8px 25px #ff8da633;transition:.2s}
+.btn:hover{transform:translateY(-3px);background:#ffc4d2}
+.card{max-width:850px;margin:20px auto;padding:28px;border-radius:24px;background:#fffdfb;box-shadow:0 12px 35px #702e3a13}
+.small{font-size:.9rem;color:#886873}
+.character{width:155px;height:155px;margin:16px auto;border-radius:50%;background:linear-gradient(135deg,#ffd9e1,#f7b6c6);display:grid;place-items:center;font-size:6rem;border:5px solid #fff;box-shadow:0 10px 35px #ffb7c777}
+.quotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:15px;max-width:950px;margin:auto}
+.quote{background:#fff;border:1px solid #ffe0e7;border-radius:20px;padding:23px}
+.dark{background:#191521;color:#fff}
+.dark .card{background:#28212e;color:#fff}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:14px;max-width:850px;margin:auto}
+.memory{padding:22px 10px;background:#fff;border-radius:18px;border:1px solid #ffe0e7}
+.memory span{display:block;font-size:2.6rem;margin-bottom:10px}
+.letter{text-align:left;white-space:pre-line}
+.countdown{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
+.time{background:#fff;color:#6b3040;border-radius:15px;padding:15px;min-width:75px}
+.time strong{font-size:1.6rem;display:block}
+.gift{font-size:5.5rem;display:block;margin:15px auto;filter:drop-shadow(0 0 22px #ff708d55);animation:bob 1.8s infinite ease-in-out}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(-12px) rotate(3deg)}}
+#secret{display:none;max-width:720px;margin:20px auto;padding:26px;border-radius:22px;background:#fff0f4;color:#4a1d2a;animation:reveal .7s ease both}
+@keyframes reveal{from{opacity:0;transform:translateY(20px) scale(.94)}to{opacity:1;transform:translateY(0) scale(1)}}
+footer{text-align:center;padding:32px 15px;background:#191521;color:#ffe0e7}
+.heart-float,.petal{position:fixed;bottom:-50px;z-index:50;pointer-events:none;animation:floatUp 6s linear forwards}
+@keyframes floatUp{0%{transform:translateY(0) rotate(0deg);opacity:0}12%{opacity:1}100%{transform:translateY(-115vh) rotate(420deg);opacity:0}}
+#overlay{position:fixed;inset:0;z-index:100;background:radial-gradient(circle at center,#4a2039,#120d18 75%);display:flex;align-items:center;justify-content:center;text-align:center;color:white;padding:24px;transition:opacity .7s,visibility .7s}
+#overlay.hidden{opacity:0;visibility:hidden;pointer-events:none}
+.intro-card{max-width:500px}
+.intro-card p{color:#f5dce5}
+.big-heart{font-size:100px;display:inline-block;filter:drop-shadow(0 0 22px #ff7ca8);animation:heartBeat 1.25s infinite;transform-style:preserve-3d}
+@keyframes heartBeat{0%,100%{transform:perspective(300px) rotateY(-12deg) scale(1)}25%{transform:perspective(300px) rotateY(12deg) scale(1.12)}50%{transform:perspective(300px) rotateY(-8deg) scale(1.04)}75%{transform:perspective(300px) rotateY(8deg) scale(1.14)}}
+.secret-title{color:#d94b72}
+@media(max-width:500px){nav{gap:10px}nav a{font-size:.75rem}section{padding:48px 14px}.card{padding:21px}.big-heart{font-size:82px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;scroll-behavior:auto!important}}
+
+/* Extra romantic animations */
+.cursor-sparkle{position:fixed;z-index:999;pointer-events:none;animation:cursorSpark 850ms ease-out forwards}
+@keyframes cursorSpark{0%{opacity:0;transform:translate(0,0) scale(.4)}20%{opacity:1}100%{opacity:0;transform:translate(var(--dx),var(--dy)) scale(1.4) rotate(35deg)}}
+.reveal-line{display:inline-block;opacity:0;transform:translateY(18px);animation:lineReveal .7s ease forwards}
+@keyframes lineReveal{to{opacity:1;transform:translateY(0)}}
+.glow-orb{position:absolute;width:120px;height:120px;border-radius:50%;background:#ff8db51c;filter:blur(5px);pointer-events:none;animation:orbDrift 8s ease-in-out infinite alternate}
+@keyframes orbDrift{from{transform:translate(0,0) scale(.8)}to{transform:translate(35px,-35px) scale(1.25)}}
+.letter-seal{display:inline-grid;place-items:center;width:70px;height:70px;border-radius:50%;background:linear-gradient(145deg,#ffb5c8,#e75b83);color:white;font-size:2rem;box-shadow:0 8px 22px #d94b6840;animation:sealPulse 2s infinite}
+@keyframes sealPulse{0%,100%{box-shadow:0 0 0 0 #ff91b566;transform:scale(1)}50%{box-shadow:0 0 0 15px #ff91b500;transform:scale(1.05)}}
+.gift-open{animation:giftOpen .8s cubic-bezier(.2,.8,.2,1)}
+@keyframes giftOpen{0%{transform:scale(1) rotate(0)}30%{transform:scale(1.15) rotate(-8deg)}60%{transform:scale(.95) rotate(8deg)}100%{transform:scale(1) rotate(0)}}
+
+</style>
+</head>
+<body>
+<div id="overlay">
+  <div class="intro-card">
+    <div class="eyebrow">A tiny surprise, just for you</div>
+    <div class="big-heart" aria-label="3D animated heart">💖</div>
+    <h1 style="font-size:clamp(3rem,10vw,5rem)">Arpita ♡</h1>
+    <p>Someone made a little corner of the internet just to make you smile. Ready to open it, birthday girl? 🌹</p>
+    <button class="btn" onclick="startExperience()">Open my surprise ✨</button>
+    <p class="small" style="color:#e6c8d3">Turn your sound on if you want to hear the tiny birthday tune.</p>
+  </div>
+</div>
+
+<nav>
+<a href="#home">Home</a><a href="#wishes">Wishes</a><a href="#quotes">Quotes</a><a href="#magic">Magic</a><a href="#cute">Cute things</a><a href="#letter">Love letter</a><a href="#surprise">Surprise</a>
+</nav>
+
+<section class="hero" id="home">
+<div class="glow-orb" style="top:14%;left:7%"></div><div class="glow-orb" style="bottom:12%;right:8%;animation-delay:-4s"></div><div class="hero-inner">
+<div class="eyebrow">A little universe made just for you ♡</div>
+<div class="character" aria-label="Cute cartoon girl with glasses">👧🏻</div>
+<p>Hey, my favourite girl…</p><h1>Arpita ♡</h1>
+<h2 style="font-size:clamp(1.5rem,5vw,2.4rem)">Your birthday is almost here! 🎂</h2>
+<p>To the girl with the cute glasses, the sweetest smile, and a special place in my heart. 💗</p>
+<button class="btn" onclick="showSecret()">Unlock a little love 💌</button>
+<p class="small" style="color:#e9cbd2">Made with lots of love, just for you.</p>
+</div>
+</section>
+
+<section id="wishes">
+<div class="eyebrow">A wish from my heart</div><h2>Happy Birthday, Arpita! 🎂💕</h2>
+<div class="card">
+<p>My sweetest Arpita, 💗</p>
+<p>May your day be filled with laughter, little surprises, warm hugs, and all the happiness you deserve. Never stop being the adorable, kind, wonderfully unique girl who makes ordinary moments feel special.</p>
+<p>I hope this new year of your life brings you beautiful memories, big smiles, and countless reasons to feel loved. You deserve the world and a little extra magic. ✨</p>
+<p><strong>Keep smiling, birthday girl. Your smile is precious. ♡</strong></p>
+</div>
+</section>
+
+<section id="quotes" style="background:#ffe9ee">
+<div class="eyebrow">Little reminders</div><h2>Cute Romantic Quotes 💌</h2>
+<div class="quotes">
+<div class="quote">“You are my favourite notification. 📱💕”</div>
+<div class="quote">“If I could choose again, I would still choose you. ♾️”</div>
+<div class="quote">“Your smile makes my whole day better. 🥹”</div>
+<div class="quote">“You + me + a thousand little memories. 💗”</div>
+<div class="quote">“The world feels softer when you're around. 🌷”</div>
+<div class="quote">“You're my favourite kind of beautiful—inside and out. ♡”</div>
+</div>
+</section>
+
+
+
+<section class="magic-section" id="magic">
+<style>
+.magic-section{background:linear-gradient(135deg,#fff0f5,#ffe0e9 55%,#fff8f2);overflow:hidden}
+.magic-heart{font-size:clamp(4rem,14vw,7rem);border:0;background:transparent;filter:drop-shadow(0 8px 18px #f06b9a66);animation:magicBeat 1.3s infinite;display:block;margin:10px auto}
+@keyframes magicBeat{0%,100%{transform:scale(1)}18%{transform:scale(1.13)}35%{transform:scale(1)}52%{transform:scale(1.08)}}
+.magic-message{max-width:650px;margin:20px auto;min-height:80px;padding:20px;border-radius:22px;background:#fff9fb;box-shadow:0 8px 25px #d94b6818;font-size:1.1rem}
+.sparkle{position:absolute;pointer-events:none;animation:sparklePop 1.3s ease-out forwards}
+@keyframes sparklePop{0%{opacity:0;transform:scale(.2) translateY(0)}25%{opacity:1}100%{opacity:0;transform:scale(1.3) translateY(-100px)}}
+</style>
+<div class="eyebrow">A little magic, just for you</div>
+<h2>Tap the Heart, Arpita 💗</h2>
+<p>Every tap unlocks one little reason you're special.</p>
+<button class="magic-heart" aria-label="Tap for a cute message" onclick="nextMagicWish(event)">💖</button>
+<div class="magic-message" id="magicMessage">Tap the heart and let the little surprises begin… ✨</div>
+<p class="small">Warning: may cause extra smiling. 🥹🌷</p>
+<script>
+const magicWishes=[
+"Your cute glasses make you even more adorable. 🤓💗",
+"Your smile deserves its own little galaxy. ✨",
+"You don't have to be perfect to be someone's favourite person. ♡",
+"Sending you a thousand virtual hugs and roses. 🌹🫂",
+"You're cute in your own special way—never change for anyone. 🧸",
+"If happiness had a face, I'd imagine your smile. 😊",
+"One more hug for the birthday girl! 🤗💞",
+"Arpita, you deserve love, peace, laughter, and all the good things. 🌷",
+"Secret message: you are very, very special to me. 💌"
+];
+let magicIndex=0;
+function nextMagicWish(ev){
+ document.getElementById('magicMessage').textContent=magicWishes[magicIndex%magicWishes.length];
+ magicIndex++;
+ const box=document.getElementById('magic');const r=box.getBoundingClientRect();
+ for(let i=0;i<12;i++){
+  const s=document.createElement('span');s.className='sparkle';s.textContent=['✨','💗','🌸','💕'][Math.floor(Math.random()*4)];
+  s.style.left=(Math.random()*85+5)+'%';s.style.top=(Math.random()*55+20)+'%';s.style.fontSize=(18+Math.random()*18)+'px';
+  box.appendChild(s);setTimeout(()=>s.remove(),1400);
+ }
+}
+</script>
+</section>
+
+<section id="cute">
+<div class="eyebrow">Little things I adore</div><h2>My Favourite Things About You 🧸</h2>
+<p class="small">No photos needed—just a few cute little reminders.</p>
+<div class="gallery">
+<div class="memory"><span>🤓💗</span>Your cute glasses</div><div class="memory"><span>😊</span>Your lovely smile</div>
+<div class="memory"><span>🧸</span>Your cuddly, cute vibe</div><div class="memory"><span>🌷</span>Your sweet heart</div>
+<div class="memory"><span>✨</span>Your one-of-a-kind magic</div><div class="memory"><span>💌</span>The way you make me smile</div>
+</div>
+</section>
+
+<section id="letter" style="background:#fff0f3">
+<div class="eyebrow">Just between us</div><div class="letter-seal">💌</div><h2>A Little Love Letter 💌</h2>
+<div class="card letter">My dearest Arpita, ❤️
+
+I don't need a perfect reason to tell you how special you are to me. You make little moments brighter just by being yourself.
+
+I hope you always remember that you deserve kindness, peace, laughter, and a love that makes you feel safe and appreciated. On your birthday, I wish you all the beautiful things your heart has been hoping for.
+
+Keep being your cute, glasses-wearing, wonderfully unique self. Never feel you have to be anyone else—you are lovely just as you are.
+
+If I could give you one thing, it would be the chance to see yourself through my eyes, even for a moment. Then you'd understand why you mean so much to me.
+
+Happy Birthday, my favourite person. May this be the start of a year full of happy surprises and unforgettable memories. 💗
+
+<strong>With all my love,</strong>
+Your favourite person ♡</div>
+</section>
+
+<section class="dark" id="surprise">
+<div class="eyebrow">One last little thing</div><h2>A Surprise for You, Arpita 🎁</h2>
+<span class="gift">🎁</span><p>Tap below to open your secret message and make the roses fall. 🌹</p>
+<button class="btn" onclick="showSecret()">Open your secret message 💝</button>
+<button class="btn" onclick="celebrate()">Make it rain hearts 💞</button>
+<div id="secret">
+<h2 class="secret-title">Surprise, Birthday Girl! 💖✨</h2>
+<p>You are loved more than these words can say. I hope your birthday brings you a hundred tiny reasons to smile. And if today gets tough, remember: someone is wishing the very best for you.</p>
+<p style="font-size:2rem">🌷 🧸 💗 🎂 💗 🧸 🌷</p>
+<p><strong>Happy Birthday, Arpita! Always keep that lovely smile. ♡</strong></p>
+</div>
+<div class="card" style="max-width:650px">
+<h3 style="margin-top:0">🎶 Arpita's Special Marathi Song</h3>
+<p>“Man Talyat Malyat” 💗</p>
+<div style="position:relative;width:100%;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:16px;background:#21131d">
+  <iframe
+    src="https://www.youtube-nocookie.com/embed/bshSJf1BHlY?rel=0"
+    title="Man Talyat Malyat - Marathi song"
+    style="position:absolute;top:0;left:0;width:100%;height:100%;border:0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen>
+  </iframe>
+</div>
+<p id="musicNote" class="small">Tap ▶ in the player to play the song. Internet connection is required; some browsers or network settings may block embedded playback.</p>
+<p><a href="https://www.youtube.com/watch?v=bshSJf1BHlY" target="_blank" rel="noopener" style="color:#b52f59">If the player doesn't work, open the song on YouTube ↗</a></p>
+</div>
+</section>
+<footer><p>Made with ❤️ especially for Arpita</p><p>28 October • A day as lovely as you ✨</p></footer>
+
+<script>
+let started=false;
+function startExperience(){
+ document.getElementById('overlay').classList.add('hidden');
+ if(!started){started=true;roseShower(35);setTimeout(()=>document.getElementById('home').scrollIntoView({behavior:'smooth'}),250);}
+}
+function roseShower(n=22){
+ for(let i=0;i<n;i++)setTimeout(()=>{
+  const el=document.createElement('div');el.className=Math.random()>.45?'petal':'heart-float';
+  el.textContent=['🌹','🌸','💗','💕','🌷','✨'][Math.floor(Math.random()*6)];
+  el.style.left=Math.random()*100+'vw';el.style.fontSize=(18+Math.random()*24)+'px';
+  el.style.animationDuration=(4+Math.random()*4)+'s';document.body.appendChild(el);
+  setTimeout(()=>el.remove(),8500);
+ },i*90);
+}
+function showSecret(){
+ const box=document.getElementById('secret');box.style.display='block';roseShower(32);
+ if(!document.getElementById('overlay').classList.contains('hidden'))document.getElementById('overlay').classList.add('hidden');
+ setTimeout(()=>box.scrollIntoView({behavior:'smooth',block:'center'}),100);
+}
+setInterval(()=>{if(Math.random()>.68){const h=document.createElement('div');h.className='heart-float';h.textContent=['💗','✨','💕'][Math.floor(Math.random()*3)];h.style.left=Math.random()*100+'vw';h.style.fontSize='20px';h.style.animationDuration='6s';document.body.appendChild(h);setTimeout(()=>h.remove(),6500)}},1400);
+function updateCountdown(){
+ const now=new Date();let year=now.getFullYear();let target=new Date(year,9,28,0,0,0);
+ if(now>=target)target=new Date(year+1,9,28,0,0,0);
+ const diff=target-now;
+ document.getElementById('days').textContent=Math.floor(diff/86400000);
+ document.getElementById('hours').textContent=Math.floor(diff%86400000/3600000);
+ document.getElementById('minutes').textContent=Math.floor(diff%3600000/60000);
+ document.getElementById('seconds').textContent=Math.floor(diff%60000/1000);
+ document.getElementById('countdownText').textContent=(now.getMonth()===9&&now.getDate()===28)?'IT’S YOUR BIRTHDAY, ARPITA! 🎂💖':'Every second brings us closer to your special day. ♡';
+}
+updateCountdown();setInterval(updateCountdown,1000);
+</script>
+
+<script>
+// Gentle sparkle trail as the visitor moves or taps around the page.
+(function(){
+ const symbols=['✨','💗','♡','🌸'];
+ let last=0;
+ function sparkle(x,y){
+  for(let i=0;i<2;i++){
+   const el=document.createElement('span');el.className='cursor-sparkle';
+   el.textContent=symbols[Math.floor(Math.random()*symbols.length)];
+   el.style.left=x+'px';el.style.top=y+'px';
+   el.style.fontSize=(12+Math.random()*15)+'px';
+   el.style.setProperty('--dx',((Math.random()-.5)*75)+'px');
+   el.style.setProperty('--dy',(-20-Math.random()*65)+'px');
+   document.body.appendChild(el);setTimeout(()=>el.remove(),900);
+  }
+ }
+ document.addEventListener('pointermove',e=>{
+  const now=Date.now();if(now-last>95){sparkle(e.clientX,e.clientY);last=now;}
+ },{passive:true});
+ document.addEventListener('click',e=>sparkle(e.clientX,e.clientY),{passive:true});
+})();
+function celebrate(){
+ const gift=document.querySelector('.gift');
+ if(gift){gift.classList.remove('gift-open');void gift.offsetWidth;gift.classList.add('gift-open');}
+ roseShower(65);
+ const msg=document.getElementById('secret');
+ msg.style.display='block';
+ msg.scrollIntoView({behavior:'smooth',block:'center'});
+}
+
+</body>
+</html>
